@@ -1,0 +1,84 @@
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gráfico con Chart.js</title>
+  </head>
+
+  <body>
+    <h1>Gráfico con Chart.js</h1>
+
+    <section id="config">
+      <h2>Configuración del gráfico</h2>
+
+      <form id="chartForm">
+        <div>
+          <label for="chartTitle">Nombre del gráfico</label>
+          <input
+            type="text"
+            id="chartTitle"
+            value="Número de votos"
+          />
+        </div>
+
+        <div>
+          <label>Color de las barras</label>
+
+          <label>
+            <input type="radio" name="barColor" value="blue" />
+            Azul
+          </label>
+
+          <label>
+            <input type="radio" name="barColor" value="red" />
+            Rojo
+          </label>
+
+          <label>
+            <input type="radio" name="barColor" value="#20c878" checked />
+            Verde
+          </label>
+
+          <label>
+            <input type="radio" name="barColor" value="orange" />
+            Naranja
+          </label>
+        </div>
+
+        <div>
+          <label for="chartLabels">Etiquetas (separadas por comas)</label>
+          <input
+            type="text"
+            id="chartLabels"
+            value="Red,Blue,Yellow,Green,Purple,Orange"
+          />
+        </div>
+
+        <div>
+          <label for="chartValues">Valores (separados por comas)</label>
+          <input
+            type="text"
+            id="chartValues"
+            value="12,19,3,5,2,3"
+          />
+        </div>
+
+        <button type="button" id="updateChart">
+          Actualizar gráfico
+        </button>
+      </form>
+    </section>
+
+    <hr />
+
+    <h3 id="chartTitleDisplay">Número de votos</h3>
+
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
